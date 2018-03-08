@@ -8,3 +8,7 @@ Flex-basis se adapta a anchura o altura dependiendo si estás utilizando flex-di
 ## Flex item 
 
 El texto es un flex item.
+
+## Split Layout
+
+Es una imagen con un texto alado ._.)7 
