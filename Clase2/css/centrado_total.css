@@ -8,5 +8,13 @@ body{
 }
 
 .centrado{
+    width: 30rem;
+    height: 30rem;
+    padding: 2rem;
+    color: white;
     background-color: steelblue;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

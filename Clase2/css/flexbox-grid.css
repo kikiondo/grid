@@ -1,0 +1,23 @@
+
+.grid-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.grid-item{
+    width: calc(50% - 5px); /*No hay otra forma*/
+    margin-bottom: 10px;
+    background: yellow;
+}
+
+
+.grid-item:nth-child(even){
+    background: pink;
+}
+
+.grid-item{
+    width: 100%;
+    margin-bottom: 10px;
+    background: yellow;
+}
