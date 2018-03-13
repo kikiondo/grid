@@ -1,0 +1,35 @@
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 60px;
+    grid-gap: 4px;
+}
+
+/*DAR ALTURA A LOS ITEMS*/
+/* .grid-item{
+    background: yellow;
+    height: 60px;
+} */
+
+.grid-item{
+    background: lightseagreen;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-item:first-child{
+    /* grid-row-start:3 ;
+    grid-row-end:6 ;
+    grid-column-start: 2;
+    grid-column-end: 5; */
+
+    /* grid-column:  span 2;
+    grid-row: span 4; Por el flujo */
+
+    grid-area: 1/1/span 2/ span 3;
+    justify-self: center;
+    align-self: center;
+
+}
