@@ -1,0 +1,92 @@
+a{ color: #000;}
+
+a:hover{ color: #fff;}
+
+.app{
+    min-height: 100vh;
+    line-height: 1.4;
+    background-color: #EEE;
+
+    /*APP es mi elemento grid */
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: 'header'
+                         'main'
+                         'sidebar'
+                         'footer'
+                         /* nav no forma parte del mi grid u.u */
+}
+
+.app >* {padding: 2rem;}
+
+.header,
+.footer{
+    grid-area: header;
+    background-color: steelblue;
+    color: #fff;
+}
+
+.footer { grid-area: footer;}
+
+.main{
+    grid-area: main;
+    background: #DDD;
+}
+
+.aside, .nav{
+    grid-area: sidebar;
+    background-color: deepskyblue;
+}
+
+.nav{
+    position: fixed; /*Se sale de la cuadricula */
+    top: 0;
+    bottom: 0; /*Estirar al nivel del eje */
+    /* width: 100%; */
+    grid-area: nav;
+    background-color: lightblue;
+    transition: transform .3s ease-out; /*Aplicando a transform*/
+    transform: translateX(-100%);
+}
+
+.nav:target{ transform: translateX(0);} /*Pseudo clase target*/
+
+/* Decorando el X */
+.close{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 1.3rem;
+    height: 1.3rem;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    background-color: steelblue;
+}
+
+@media screen and (min-width: 64em){
+    /* La etiqueta que no estoy utilizando */
+    .app{
+        grid-template-columns: 1fr 4fr 1fr;
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: 'header header header '
+                             'nav nav nav '
+                             'main main sidebar'
+                             'footer footer footer';
+    }
+
+    .nav {
+        position: static; /*Por defecto es static */
+        transform: translate(0 ,0 );
+    }
+
+    .nav li {
+        display: inline;
+        padding: 0 1rem;
+    } 
+
+    .toggle{ display: none;}
+
+}
