@@ -1,0 +1,52 @@
+
+
+.History{
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) ;
+    grid-template-rows: repeat(8, minmax(1rem, 4rem));
+    grid-gap:1vw;
+    grid-auto-flow: row dense;
+
+}
+
+.History-items{
+    border: medium solid #000;
+    background-color: steelblue;
+    padding: 1rem;
+    font-size: 2rem;
+    color: #FFF;
+}
+
+.History-items:first-of-type{
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.History-items:nth-of-type(2){
+    grid-column: span 2;
+    grid-row: span 1;
+}
+.History-items:nth-of-type(3){
+    grid-column: span 2;
+    grid-row: span 2;
+}
+.History-items:nth-of-type(4){
+    grid-column: span 3;
+    grid-row: span 1;
+}
+
+.History-items:nth-of-type(5),
+.History-items:nth-of-type(6),
+.History-items:nth-of-type(7)
+{
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.History-items:nth-of-type(8){
+    grid-column: span 2;
+    grid-row: 1;
+}
