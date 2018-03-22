@@ -1,0 +1,18 @@
+/* 
+BEMIT -> Variacón de BEM con la metodologia ITCSS
+    u-
+    c-
+    l-
+
+Bloque 
+    Pueden llevar guion intermedio (como prefijos)
+        menu-container
+
+Elemento
+    Se separa del bloque con doble guion bajo __
+
+Modificador
+    Se separa de se elemento o bloque con doble guion medio
+
+*/
+
