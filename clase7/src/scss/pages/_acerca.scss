@@ -1,3 +1,4 @@
+
 .About {
   display: grid;
   grid-template: {
@@ -85,7 +86,7 @@
     max-width: none;
     width: auto;
     height: 100%;
-    object-fit: contain;
+    object-fit: contain; //contain adapta la altura sin deformar imagen
     object-position: 50% 50%;
     transition: all .5s ease-in;
 
